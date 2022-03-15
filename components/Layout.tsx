@@ -30,6 +30,7 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => (
         | <a href="/api/users">Users API</a>
       </nav>
     </header>
+    <div className="absolute left-0 bg-red-500 w-8 h-screen"></div>
     {children}
     <footer>
       <hr />
