@@ -1,32 +1,30 @@
-import Link from 'next/link'
 import Layout from '../components/Layout'
 import client from '../pages/api/contentful';
 import { useEffect, useState } from 'react';
+import Card from '../components/Card';
 
 const IndexPage = () => {
-  const [posts, setPosts] = useState([]);
+  const [players, setPlayers] = useState([]);
 
   useEffect(() => {
-    const fetchPosts = async () => {
+    const fetchPlayers = async () => {
       const response = await client.getEntries();
-      setPosts(response.items);
+      setPlayers(response.items);
     }
-    fetchPosts();
+    fetchPlayers();
   }, []);
   
   return (
-    <Layout title="Home | Next.js + TypeScript Example">
+    <Layout title="Crew – PixelSlaves.com">
       <div className="container">
-        <h1 className="text-4xl font-bold underline">
-          Hello world!
+        <h1 className="sr-only">
+          Crew
         </h1>
-        <h1 className="text-sm">Hello Next.js 👋</h1>
-        {posts.map(post => (
-          <div key={post.sys.id}>
-            <h3>{post.fields.name}</h3>
-            <div>{post.fields.twitter}</div>
-          </div>
-        ))}
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {players.map(player => (
+            <Card key={player.sys.id} player={player} />
+          ))}
+        </div>
       </div>
     </Layout>
   )
