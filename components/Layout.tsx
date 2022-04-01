@@ -5,11 +5,11 @@ import Footer from '../components/Footer';
 
 type Props = {
   children?: ReactNode
-  title?: string
+  title?: string,
 }
 
 const Layout = ({ children, title = 'This is the default title' }: Props) => (
-  <div>
+  <div className="dark:bg-black">
     <Head>
       <title>{title}</title>
       <meta charSet="utf-8" />
