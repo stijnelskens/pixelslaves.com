@@ -9,7 +9,11 @@ type Props = {
   header: boolean
 }
 
-const Layout = ({ children, header, title = 'This is the default title' }: Props) => (
+const Layout = ({ children, header, title = 'This is the default title' }: Props) => {
+  if (typeof window === 'object') {
+    document.querySelector("body").classList.add('dark:bg-black');
+  }
+  return (
   <div className="dark:bg-black">
     <Head>
       <title>{title}</title>
@@ -20,6 +24,7 @@ const Layout = ({ children, header, title = 'This is the default title' }: Props
     {children}
     <Footer />
   </div>
-)
+  );
+}
 
 export default Layout
