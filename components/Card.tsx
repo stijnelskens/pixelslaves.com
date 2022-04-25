@@ -4,7 +4,7 @@ import { Player } from '../interfaces/index';
 const Card = ({player}: Player) => {
   const { name, twitter, twitch, instagram, tiktok } = player.fields;
   return (
-    <div className={`flex flex-col justify-center p-6 border-2 rounded-lg dark:text-white ${name == 'PixelSlaves_' ? 'border-red-400 dark:border-red-500' : 'border-gray-200 dark:border-gray-800'}`} key={player.sys.id}>
+    <div className={`flex flex-col justify-center p-6 border-2 rounded-lg dark:text-white ${name == 'PixelSlaves_' ? 'border-red-400 dark:border-red-500' : 'border-gray-200 dark:border-gray-border'}`} key={player.sys.id}>
       <h3 className="mb-2 text-2xl font-bold">{name}</h3>
       {player.metadata.tags[0] && (
         <div className="mb-4">

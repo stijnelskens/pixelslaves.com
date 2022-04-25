@@ -1,7 +1,7 @@
 import Layout from '../components/Layout'
 import Image from 'next/image';
-import { GetStaticProps } from "next";
-import { IoLogoTwitch, IoLogoTiktok, IoLogoInstagram, IoLogoTwitter, IoLogoDiscord } from 'react-icons/io5';
+import { IoLogoTwitch, IoLogoTiktok, IoLogoInstagram, IoLogoTwitter, IoLogoDiscord, IoArrowForward } from 'react-icons/io5';
+import Link from 'next/link';
 // import { fetchWooCommerceProducts } from '../utils/wooCommerceApi';
 // import { Product } from "../interfaces/wooCommerceTypes";
 
@@ -9,7 +9,7 @@ import { IoLogoTwitch, IoLogoTiktok, IoLogoInstagram, IoLogoTwitter, IoLogoDisco
 //   products: Product[];
 // }
 
-const IndexPage = (props: Props) => {
+const IndexPage = () => {
   // const { products } = props;
   // console.log("--WooCommerce Products: ", products);
   
@@ -31,36 +31,58 @@ const IndexPage = (props: Props) => {
               </a>
             </li>
             <li className="px-2">
-              <a href="/" target="_blank" rel="noopener" className="text-3xl dark:text-white hover:text-blue-400">
+              <a href="/" target="_blank" rel="noopener" className="text-3xl dark:text-white hover:text-violet-700">
                 <span className="sr-only">Twitch</span>
                 <IoLogoTwitch />
               </a>
             </li>
             <li className="px-2">
-              <a href="/" target="_blank" rel="noopener" className="text-3xl dark:text-white hover:text-blue-400">
+              <a href="/" target="_blank" rel="noopener" className="text-3xl dark:text-white hover:text-orange-400">
                 <span className="sr-only">Instagram</span>
                 <IoLogoInstagram />
               </a>
             </li>
             <li className="px-2">
-              <a href="/" target="_blank" rel="noopener" className="text-3xl dark:text-white hover:text-blue-400">
+              <a href="/" target="_blank" rel="noopener" className="text-3xl dark:text-white hover:text-red-400">
                 <span className="sr-only">Tiktok</span>
                 <IoLogoTiktok />
               </a>
             </li>
             <li className="px-2">
-              <a href="/" target="_blank" rel="noopener" className="text-3xl dark:text-white hover:text-blue-400">
+              <a href="/" target="_blank" rel="noopener" className="text-3xl dark:text-white hover:text-indigo-600">
                 <span className="sr-only">Discord</span>
                 <IoLogoDiscord />
               </a>
             </li>
           </ul>
         </nav>
-        <div className="py-12 text-center">
-          <h2 className="text-3xl font-medium dark:text-white">Merch</h2>
+        <div className="mt-6 text-center">
+          <Link href="/crew">
+            <a className="inline-flex items-center px-6 py-2 font-medium text-white uppercase bg-red-600 rounded-lg hover:bg-red-800">Check de crew <IoArrowForward className="ml-2" /></a>
+          </Link>
+        </div>
+        <div className="pt-20 pb-12 text-center">
+          <h2 className="text-3xl font-medium dark:text-white">Clothing</h2>
           <div className="flex flex-wrap justify-center -mx-4">
             <div className="w-full px-4 mt-8 md:w-1/3">
-              <Image src="https://res.cloudinary.com/dg9w1qoqg/image/upload/v1650405308/PixelSlaves/unisex-organic-cotton-t-shirt-black-front-625325613bec6_yac5ex.png" alt="tshirt" className="rounded-full" width={350} height={350} />
+              <a href="/" target="_blank" rel="noopener noreferer" className="flex flex-col p-6 border-2 border-gray-200 rounded-lg dark:border-gray-border group">
+                <div>
+                  <Image src="https://res.cloudinary.com/dg9w1qoqg/image/upload/v1650405308/PixelSlaves/unisex-organic-cotton-t-shirt-black-front-625325613bec6_yac5ex.png" alt="PixelSlaves tshirt black" className="rounded-full" width={350} height={350} />
+                </div>
+                <div className="mt-4">
+                  <span className="inline-block px-6 py-2 font-medium text-white uppercase bg-red-600 rounded-lg group-hover:bg-red-800">Koop nu</span>
+                </div>
+              </a>
+            </div>
+            <div className="w-full px-4 mt-8 md:w-1/3">
+              <a href="/" target="_blank" rel="noopener noreferer" className="flex flex-col p-6 border-2 border-gray-200 rounded-lg dark:border-gray-border group">
+                <div>
+                  <Image src="https://res.cloudinary.com/dg9w1qoqg/image/upload/v1650917415/PixelSlaves/unisex-organic-cotton-t-shirt-white-front-6266ffc95d301_tf80si.png" alt="PixelSlaves tshirt white" className="rounded-full" width={350} height={350} />
+                </div>
+                <div className="mt-4">
+                  <span className="inline-block px-6 py-2 font-medium text-white uppercase bg-red-600 rounded-lg group-hover:bg-red-800">Koop nu</span>
+                </div>
+              </a>
             </div>
           </div>
         </div>

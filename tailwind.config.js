@@ -10,6 +10,11 @@ module.exports = {
         center: true,
         padding: "1rem",
       },
+      colors: {
+        gray: {
+          "border": "#191919",
+        },
+      },
     },
   },
   plugins: [],
