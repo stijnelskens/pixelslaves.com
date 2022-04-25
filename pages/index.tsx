@@ -1,8 +1,18 @@
 import Layout from '../components/Layout'
 import Image from 'next/image';
+import { GetStaticProps } from "next";
 import { IoLogoTwitch, IoLogoTiktok, IoLogoInstagram, IoLogoTwitter, IoLogoDiscord } from 'react-icons/io5';
+// import { fetchWooCommerceProducts } from '../utils/wooCommerceApi';
+// import { Product } from "../interfaces/wooCommerceTypes";
 
-const IndexPage = () => {  
+// interface Props {
+//   products: Product[];
+// }
+
+const IndexPage = (props: Props) => {
+  // const { products } = props;
+  // console.log("--WooCommerce Products: ", products);
+  
   return (
     <Layout title="Crew – PixelSlaves.com" header={false}>
       <div className="container">
@@ -57,7 +67,25 @@ const IndexPage = () => {
       </div>
     </Layout>
   )
-}
+};
+
+// export const getStaticProps: GetStaticProps = async () => {
+//   const wooCommerceProducts = await fetchWooCommerceProducts().catch((error) =>
+//     console.error(error)
+//   );
+
+//   if (!wooCommerceProducts) {
+//     return {
+//       notFound: true,
+//     };
+//   }
+
+//   return {
+//     props: {
+//       products: wooCommerceProducts.data,
+//     },
+//   };
+// };
 
 // get static props
 // export async function getStaticProps() {
