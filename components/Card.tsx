@@ -11,7 +11,7 @@ const Card = ({player}: Player) => {
           <span className="text-gray-500 capitalize">{player.metadata.tags[0].sys.id}</span>
         </div>
       )}
-      {twitter && twitch && instagram && tiktok && (
+      {/* {twitter && twitch && instagram && tiktok && ( */}
         <ul className="flex space-x-2">
           {twitter && (
             <li>
@@ -46,7 +46,7 @@ const Card = ({player}: Player) => {
           </li>
           )}
         </ul>
-      )}
+      {/* )} */}
     </div>
   );
 };

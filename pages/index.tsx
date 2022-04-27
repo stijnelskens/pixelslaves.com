@@ -67,15 +67,15 @@ const IndexPage = () => {
         </nav>
         <div className="mt-6 text-center">
           <Link href="/crew">
-            <a className="inline-flex items-center px-6 py-2 font-medium text-white uppercase bg-red-600 rounded-lg hover:bg-red-800">Check de crew <IoArrowForward className="ml-2" /></a>
+            <a className="inline-flex items-center px-6 py-2 font-medium text-white uppercase bg-red-600 rounded-lg hover:bg-red-800 group">Check de crew <IoArrowForward className="ml-2 transition-transform duration-300 ease-in-out group-hover:translate-x-1" /></a>
           </Link>
         </div>
         <div className="pt-20 pb-12 text-center">
           <h2 className="text-3xl font-medium dark:text-white">Clothing</h2>
           <div className="flex flex-wrap justify-center -mx-4">
             <div className="w-full px-4 mt-8 md:w-1/3">
-              <a href="/" target="_blank" rel="noopener noreferer" className="flex flex-col p-6 border-2 border-gray-200 rounded-lg dark:border-gray-border group">
-                <div>
+              <a href="/" target="_blank" rel="noopener noreferer" className="flex flex-col p-6 group">
+                <div className="transition-transform duration-300 ease-in-out group-hover:-translate-y-2">
                   <Image src="https://res.cloudinary.com/dg9w1qoqg/image/upload/v1650405308/PixelSlaves/unisex-organic-cotton-t-shirt-black-front-625325613bec6_yac5ex.png" alt="PixelSlaves tshirt black" className="rounded-full" width={350} height={350} />
                 </div>
                 <div className="mt-4">
@@ -84,8 +84,8 @@ const IndexPage = () => {
               </a>
             </div>
             <div className="w-full px-4 mt-8 md:w-1/3">
-              <a href="/" target="_blank" rel="noopener noreferer" className="flex flex-col p-6 border-2 border-gray-200 rounded-lg dark:border-gray-border group">
-                <div>
+              <a href="/" target="_blank" rel="noopener noreferer" className="flex flex-col p-6 group">
+                <div className="transition-transform duration-300 ease-in-out group-hover:-translate-y-2">
                   <Image src="https://res.cloudinary.com/dg9w1qoqg/image/upload/v1650917415/PixelSlaves/unisex-organic-cotton-t-shirt-white-front-6266ffc95d301_tf80si.png" alt="PixelSlaves tshirt white" className="rounded-full" width={350} height={350} />
                 </div>
                 <div className="mt-4">
