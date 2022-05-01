@@ -1,12 +1,6 @@
 import Link from 'next/link';
 
-const Header = () => {
-  // if (typeof window !== 'undefined') {
-  //   window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
-  //     const dark = event.matches ? true : false;
-  //   });
-  // }
-  
+const Header = () => {  
   return (
     <header className="py-8 border-t-4 border-red-500">
       <div className="container">
