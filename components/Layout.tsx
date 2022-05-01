@@ -11,11 +11,11 @@ type Props = {
 }
 
 const Layout = ({ children, header, title = 'This is the default title' }: Props) => {
-  if (typeof window === 'object') {
-    document.querySelector("body").classList.add('dark:bg-black');
-  }
+  // if (typeof window === 'object') {
+  //   document.querySelector("body").classList.add('dark:bg-black');
+  // }
   return (
-  <div className="dark:bg-black">
+  <div>
     <Head>
       <title>{title}</title>
       <meta charSet="utf-8" />
