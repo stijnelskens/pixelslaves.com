@@ -15,17 +15,19 @@ const Layout = ({ children, header, title = 'This is the default title' }: Props
   //   document.querySelector("body").classList.add('dark:bg-black');
   // }
   return (
-  <div>
-    <Head>
-      <title>{title}</title>
-      <meta charSet="utf-8" />
-      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      <Favicon />
-    </Head>
-    {header && <Header />}
-    {children}
-    <Footer />
-  </div>
+    <div className="h-full">
+      <Head>
+        <title>{title}</title>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <Favicon />
+      </Head>
+      {header && <Header />}
+      <div className="flex flex-col justify-between h-full">
+        {children}
+        <Footer />
+      </div>
+    </div>
   );
 }
 

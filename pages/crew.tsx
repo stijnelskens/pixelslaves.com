@@ -2,14 +2,22 @@ import Layout from '../components/Layout'
 import client from './api/contentful';
 import { useEffect, useState } from 'react';
 import Card from '../components/Card';
+import Loader from '../components/Loader';	
 
 const CrewPage = () => {
   const [players, setPlayers] = useState([]);
+  const [error, setError] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const fetchPlayers = async () => {
-      const response = await client.getEntries();
-      setPlayers(response.items);
+      setLoading(true);
+      await client.getEntries().then(res =>  {
+        setPlayers(res.items);
+        setLoading(false);
+      }).catch(err => {
+        setError(err);
+      });
     }
     fetchPlayers();
   }, []);
@@ -21,7 +29,9 @@ const CrewPage = () => {
           Crew
         </h1>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {players.map(player => (
+          {loading && <Loader />}
+          {error && <p>Er is een probleem met de items te laden.</p>}
+          {!loading && !error && players.map(player => (
             <Card key={player.sys.id} player={player} />
           ))}
         </div>

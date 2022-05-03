@@ -5,3 +5,11 @@
 ::selection {
   @apply text-red-200 bg-red-700;
 }
+
+html, body {
+  @apply h-full;
+
+  > div {
+    @apply h-full;
+  }
+}
