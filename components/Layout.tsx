@@ -20,6 +20,10 @@ const Layout = ({ children, header, title = 'This is the default title' }: Props
         <title>{title}</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta property="og:title" content="PixelSlaves.com" key="title" />
+        <meta property="og:image" content="https://res.cloudinary.com/dg9w1qoqg/image/upload/v1651695332/PixelSlaves/PixelSlaves_wallpaper2_fvdj7i.jpg" />
+        <meta name="description" content="Welkom op de officiële website van de PixelSlaves!" />
+        <meta name="keywords" content="Gaming, Call of Duty, Warzone, DayZ, Community, Twitch" />
         <Favicon />
       </Head>
       {header && <Header />}
