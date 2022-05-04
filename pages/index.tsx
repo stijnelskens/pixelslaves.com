@@ -18,31 +18,31 @@ const IndexPage = () => {
           <nav className="mt-8">
             <ul className="flex flex-wrap justify-center">
               <li className="px-2">
-                <a href="/" target="_blank" rel="noopener" className="text-3xl hover:text-blue-400">
+                <a href="/" target="_blank" rel="noopener noreferrer" className="text-3xl hover:text-blue-400">
                   <span className="sr-only">Twitter</span>
                   <IoLogoTwitter />
                 </a>
               </li>
               <li className="px-2">
-                <a href="/" target="_blank" rel="noopener" className="text-3xl hover:text-violet-700">
+                <a href="/" target="_blank" rel="noopener noreferrer" className="text-3xl hover:text-violet-700">
                   <span className="sr-only">Twitch</span>
                   <IoLogoTwitch />
                 </a>
               </li>
               <li className="px-2">
-                <a href="/" target="_blank" rel="noopener" className="text-3xl hover:text-orange-400">
+                <a href="/" target="_blank" rel="noopener noreferrer" className="text-3xl hover:text-orange-400">
                   <span className="sr-only">Instagram</span>
                   <IoLogoInstagram />
                 </a>
               </li>
               <li className="px-2">
-                <a href="/" target="_blank" rel="noopener" className="text-3xl hover:text-red-400">
+                <a href="/" target="_blank" rel="noopener noreferrer" className="text-3xl hover:text-red-400">
                   <span className="sr-only">Tiktok</span>
                   <IoLogoTiktok />
                 </a>
               </li>
               <li className="px-2">
-                <a href="/" target="_blank" rel="noopener" className="text-3xl hover:text-indigo-600">
+                <a href="/" target="_blank" rel="noopener noreferrer" className="text-3xl hover:text-indigo-600">
                   <span className="sr-only">Discord</span>
                   <IoLogoDiscord />
                 </a>
