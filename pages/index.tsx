@@ -54,7 +54,7 @@ const IndexPage = () => {
               <a className="inline-flex items-center px-6 py-2 font-medium text-white uppercase transition duration-300 ease-in-out bg-red-600 rounded-lg hover:bg-red-800">Check de crew <IoPeople className="ml-2" /></a>
             </Link>
           </div>
-          {/* <div className="pt-20 pb-12 text-center">
+          <div className="pt-20 pb-12 text-center">
             <h2 className="mb-4 text-3xl font-medium">Clothing</h2>
             <div className="flex flex-wrap justify-center -mx-4">
               <div className="w-full px-4 mt-8 md:w-1/4">
@@ -78,7 +78,7 @@ const IndexPage = () => {
                 </a>
               </div>
             </div>
-          </div> */}
+          </div>
         </div>
       </div>
     </Layout>
