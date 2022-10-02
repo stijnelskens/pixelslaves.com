@@ -1,5 +1,5 @@
-import React, { ReactNode } from 'react'
-import Head from 'next/head'
+import React, { ReactNode } from 'react';
+import Head from 'next/head';
 import Favicon from '../components/Favicon';
 import Header from '../components/Header'	
 import Footer from '../components/Footer';
@@ -11,9 +11,6 @@ type Props = {
 }
 
 const Layout = ({ children, header, title = 'This is the default title' }: Props) => {
-  // if (typeof window === 'object') {
-  //   document.querySelector("body").classList.add('dark:bg-black');
-  // }
   return (
     <div className="h-full">
       <Head>
