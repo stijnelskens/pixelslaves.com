@@ -6,7 +6,7 @@ const Loader = () => {
       <span className="sr-only">Loading</span>
       { Array.from({ length: 18 }, (_, index) => {
         return (
-          <div className="w-full p-8 mx-auto border-2 border-gray-200 rounded-lg" aria-hidden="true" key={index}>
+          <div className="w-full p-8 mx-auto border-2 border-gray-200 rounded-lg animate-fade-in" aria-hidden="true" key={index}>
             <div className="flex space-x-4 animate-pulse">
               <div className="w-10 h-10 bg-gray-300 rounded-full"></div>
               <div className="flex-1 py-1 space-y-8">

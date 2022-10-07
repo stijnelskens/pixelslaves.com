@@ -15,8 +15,8 @@ const CrewPage: NextPage = () => {
     const fetchPlayers = async () => {
       setLoading(true);
       await client.getEntries().then(res =>  {
-        // setPlayers(res.items);
-        setLoading(true);
+        setPlayers(res.items);
+        setLoading(false);
       }).catch(err => {
         setError(err);
       });
