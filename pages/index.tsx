@@ -1,9 +1,11 @@
+import React from 'react';
 import Layout from '../components/Layout'
+import type { NextPage } from 'next';
 import Image from 'next/image';
 import { IoLogoTwitch, IoLogoTiktok, IoLogoInstagram, IoLogoTwitter, IoLogoDiscord, IoPeople, IoBag } from 'react-icons/io5';
 import Link from 'next/link';
 
-const IndexPage = () => {  
+const IndexPage: NextPage = () => {  
   return (
     <Layout title="PixelSlaves.com" header={false}>
       <div className="border-t-4 border-red-500">

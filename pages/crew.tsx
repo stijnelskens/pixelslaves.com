@@ -1,10 +1,12 @@
+import React from 'react';
+import type { NextPage } from 'next';
 import Layout from '../components/Layout'
 import client from './api/contentful';
 import { useEffect, useState } from 'react';
 import Card from '../components/Card';
 import Loader from '../components/Loader';	
 
-const CrewPage = () => {
+const CrewPage: NextPage = () => {
   const [players, setPlayers] = useState([]);
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -13,8 +15,8 @@ const CrewPage = () => {
     const fetchPlayers = async () => {
       setLoading(true);
       await client.getEntries().then(res =>  {
-        setPlayers(res.items);
-        setLoading(false);
+        // setPlayers(res.items);
+        setLoading(true);
       }).catch(err => {
         setError(err);
       });
@@ -23,7 +25,7 @@ const CrewPage = () => {
   }, []);
   
   return (
-    <Layout title="Crew – PixelSlaves.com" header={true}>
+    <Layout title="Crew | PixelSlaves.com" header={true}>
       <div className="container">
         <h1 className="sr-only">
           Crew

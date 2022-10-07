@@ -1,7 +1,8 @@
+import React from 'react';
 import { IoLogoTwitch, IoLogoTiktok, IoLogoInstagram, IoLogoTwitter } from 'react-icons/io5';
 import { Player } from '../interfaces/index';
 
-const Card = ({player}: Player) => {
+const Card = ({ player }: Player) => {
   const { name, twitter, twitch, instagram, tiktok } = player.fields;
   return (
     <div className={`flex flex-col justify-center p-6 border-2 rounded-lg ${name == 'PixelSlaves_' ? 'border-red-400' : 'border-gray-200'}`} key={player.sys.id}>
@@ -11,7 +12,7 @@ const Card = ({player}: Player) => {
           <span className="text-gray-500 capitalize">{player.metadata.tags[0].sys.id}</span>
         </div>
       )}
-      {/* {twitter && twitch && instagram && tiktok && ( */}
+      {(twitter || twitch || instagram || tiktok) && (
         <ul className="flex space-x-3">
           {twitter && (
             <li>
@@ -46,7 +47,7 @@ const Card = ({player}: Player) => {
           </li>
           )}
         </ul>
-      {/* )} */}
+      )}
     </div>
   );
 };
