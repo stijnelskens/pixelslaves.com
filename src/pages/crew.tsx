@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import type { NextPage } from 'next';
 import Layout from '../components/Layout'
 import client from './api/contentful';
 import Card from '../components/Card';
 import Loader from '../components/Loader';	
 
-const CrewPage = () => {
+const CrewPage: NextPage = () => {
   const [players, setPlayers] = useState([]);
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -23,7 +24,7 @@ const CrewPage = () => {
   }, []);
   
   return (
-    <Layout title="Crew – PixelSlaves.com" header={true}>
+    <Layout title="Crew | PixelSlaves.com" header={true}>
       <div className="container">
         <h1 className="sr-only">
           Crew
@@ -38,16 +39,6 @@ const CrewPage = () => {
       </div>
     </Layout>
   )
-}
-
-// get static props
-// export async function getStaticProps() {
-//   const res = await client.getEntries();
-//   return {
-//     props: {
-//       posts: res.items
-//     }
-//   }
-// };
+};
 
 export default CrewPage;
