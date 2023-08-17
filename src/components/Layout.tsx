@@ -4,7 +4,7 @@ import Favicon from './Favicon';
 import Header from './Header'	
 import Footer from './Footer';
 
-interface Props {
+type Props = {
   children?: ReactNode
   title?: string,
   header: boolean
