@@ -1,5 +1,5 @@
 import React from 'react';
-import Layout from '../components/Layout'
+import Layout from '~/components/Layout'
 import type { NextPage } from 'next';
 import Image from 'next/image';
 import { IoLogoTwitch, IoLogoTiktok, IoLogoInstagram, IoLogoDiscord } from 'react-icons/io5';
