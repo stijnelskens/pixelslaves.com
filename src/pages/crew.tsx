@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import type { NextPage } from 'next';
-import Layout from '../components/Layout'
+import Layout from '~/components/Layout'
 import client from './api/contentful';
-import Card from '../components/Card';
-import Loader from '../components/Loader';	
+import Card from '~/components/Card';
+import Loader from '~/components/Loader';	
 
 const CrewPage: NextPage = () => {
   const [players, setPlayers] = useState([]);
