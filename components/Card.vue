@@ -1,5 +1,4 @@
 <script>
-import { formatDate } from "~/utils";
 export default {
   props: {
     post: {
@@ -13,122 +12,35 @@ export default {
 <template>
   <UCard>
     <template #header>
-      <h3>{{ post.name }}</h3>
+      <h3 class="text-lg font-bold">{{ post.name }}</h3>
+      <span class="text-sm">{{
+        post.categories.map((category) => category.title).join(", ")
+      }}</span>
     </template>
-
-    <Placeholder class="h-32" />
-
     <template #footer>
-      <Placeholder class="h-8" />
+      <ul
+        class="flex items-center gap-2"
+        v-if="post.twitch || post.instagram || post.tiktok"
+      >
+        <li v-if="post.twitch">
+          <a :href="post.twitch" target="_blank" rel="noopener noreferrer">T</a>
+        </li>
+        <li v-if="post.instagram">
+          <a :href="post.instagram" target="_blank" rel="noopener noreferrer"
+            >I</a
+          >
+        </li>
+        <li v-if="post.tiktok">
+          <a :href="post.tiktok" target="_blank" rel="noopener noreferrer"
+            >TI</a
+          >
+        </li>
+        <li v-if="post.twitter">
+          <a :href="post.twitter" target="_blank" rel="noopener noreferrer"
+            >X</a
+          >
+        </li>
+      </ul>
     </template>
   </UCard>
 </template>
-
-<style scoped>
-.card {
-  display: flex;
-  flex-direction: column;
-  padding: var(--space-2);
-  padding: 9px;
-  position: relative;
-  border-bottom: 1px solid #ced2d9;
-
-  & .card__container {
-    margin: 0 var(--space-1) 0;
-  }
-
-  & .card__cover {
-    width: 100%;
-    height: 231px;
-    object-fit: cover;
-  }
-
-  & .card__cover--none {
-    width: 100%;
-    height: 231px;
-    background: var(--black);
-  }
-
-  & .card__title {
-    font-family: var(--font-family-sans);
-    font-weight: 800;
-    font-size: var(--font-size-7);
-    line-height: var(--line-height-6);
-    letter-spacing: -0.025em;
-    margin: var(--space-3) 0;
-  }
-
-  & .card__excerpt {
-    font-family: var(--font-family-serif);
-    font-weight: 400;
-    font-size: var(--font-size-4);
-    line-height: var(--line-height-3);
-    margin-top: 0;
-  }
-
-  & .card__date {
-    font-weight: 600;
-    font-family: var(--font-family-sans);
-    font-size: var(--font-size-1);
-    margin-top: calc(var(----space-4) + 7);
-  }
-
-  & .card__link {
-    color: var(--black);
-    text-decoration: none;
-
-    &:hover {
-      opacity: 0.8;
-      transition: 0.2s;
-    }
-
-    &::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-    }
-  }
-
-  &:first-child {
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
-  }
-
-  &:last-child {
-    border-bottom-left-radius: 3px;
-    border-bottom-right-radius: 3px;
-  }
-}
-
-@media (min-width: 575px) {
-  .card {
-    border: 1px solid #ced2d9;
-    border-bottom: none;
-
-    & .card__title {
-      margin-top: var(--space-4);
-    }
-
-    &:last-child {
-      border-bottom: 1px solid #ced2d9;
-    }
-  }
-}
-
-@media (min-width: 800px) {
-  .card {
-    flex-direction: row;
-
-    & .card__container {
-      margin: 0 var(--space-4) 0;
-    }
-
-    & .card__cover,
-    & .card__cover--none {
-      min-width: 366.5px;
-      max-width: 366.5px;
-      max-height: 231px;
-    }
-  }
-}
-</style>
