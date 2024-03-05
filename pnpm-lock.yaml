@@ -34,6 +34,9 @@ devDependencies:
   nuxt:
     specifier: ^3.8.1
     version: 3.10.3(@types/node@18.19.21)(vite@5.1.4)
+  nuxt-icon:
+    specifier: ^0.6.8
+    version: 0.6.8(nuxt@3.10.3)(vite@5.1.4)(vue@3.4.21)
   postcss:
     specifier: ^8.4.35
     version: 8.4.35
@@ -831,11 +834,9 @@ packages:
     resolution: {integrity: sha512-VUou3gD0xp12OJ1SzHHJdRws3DBHzzOAUVGWf8jlCp97QMqn+N8rxrLtJI5CllAOLEFwU2MFrlZ+OuohJaEb/A==}
     dependencies:
       '@iconify/types': 2.0.0
-    dev: false
 
   /@iconify/types@2.0.0:
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
-    dev: false
 
   /@iconify/utils@2.1.22:
     resolution: {integrity: sha512-6UHVzTVXmvO8uS6xFF+L/QTSpTzA/JZxtgU+KYGFyDYMEObZ1bu/b5l+zNJjHy+0leWjHI+C0pXlzGvv3oXZMA==}
@@ -858,7 +859,6 @@ packages:
     dependencies:
       '@iconify/types': 2.0.0
       vue: 3.4.21
-    dev: false
 
   /@ioredis/commands@1.2.0:
     resolution: {integrity: sha512-Sx1pU8EM64o2BrqNpEO1CNLtKQwyhuXuqyfH7oGKCk+1a33d2r5saW8zNwm3j6BTExtjrv2BxTgzzkMwts6vGg==}
@@ -4702,7 +4702,6 @@ packages:
       - supports-color
       - vite
       - vue
-    dev: false
 
   /nuxt@3.10.3(@types/node@18.19.21)(vite@5.1.4):
     resolution: {integrity: sha512-NchGNiiz9g/ErJAb462W/lpX2NqcXYb9hugySKWvLXNdrjeAPiJ2/7mhgwUSiZA9MpjuQg3saiEajr1zlRIOCg==}

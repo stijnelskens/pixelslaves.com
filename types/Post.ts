@@ -1,4 +1,4 @@
-import { PortableTextBlock, Slug, ImageAsset } from "@sanity/types";
+import { Slug } from "@sanity/types";
 
 export interface Post {
   _id: string;
@@ -6,7 +6,13 @@ export interface Post {
   _createdAt: string;
   title?: string;
   slug: Slug;
-  excerpt?: string;
-  mainImage?: ImageAsset;
-  body: PortableTextBlock[];
+  categories: {
+    _id: string;
+    title: string;
+  }[];
+  twitter: string;
+  twitch: string;
+  youtube: string;
+  instagram: string;
+  tiktok: string;
 }

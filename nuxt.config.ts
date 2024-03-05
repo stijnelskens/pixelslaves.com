@@ -15,7 +15,15 @@ export default defineNuxtConfig({
       },
     ],
     "@nuxt/ui",
+    "nuxt-icon",
+    "@nuxtjs/seo",
   ],
+  site: {
+    url: "https://pixelslaves.com",
+    name: "Pixelslaves",
+    description: "Welkom op de officiële website van de PixelSlaves!",
+    defaultLocale: "nl-BE",
+  },
   sanity: {
     projectId: process.env.NUXT_ENV_SANITY_PROJECT_ID,
     dataset: process.env.NUXT_ENV_SANITY_DATASET,
@@ -28,4 +36,8 @@ export default defineNuxtConfig({
       "postcss-nested": {},
     },
   },
+  build: {
+    transpile: ["oh-vue-icons"],
+  },
+  devtools: { enabled: true },
 });
