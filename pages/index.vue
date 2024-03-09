@@ -20,7 +20,15 @@ definePageMeta({
         v-motion-fade-visible-once
         :delay="400"
       >
-        <UButton size="lg" color="gray" square variant="solid">
+        <UButton
+          size="lg"
+          color="gray"
+          square
+          variant="solid"
+          to="https://www.twitch.tv/PixelSlaves_"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 512 512"
@@ -32,7 +40,15 @@ definePageMeta({
             />
           </svg>
         </UButton>
-        <UButton size="lg" color="gray" square variant="solid">
+        <UButton
+          size="lg"
+          color="gray"
+          square
+          variant="solid"
+          to="https://www.instagram.com/pixelslaves_/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 448 512"
@@ -44,7 +60,15 @@ definePageMeta({
             />
           </svg>
         </UButton>
-        <UButton size="lg" color="gray" square variant="solid">
+        <UButton
+          size="lg"
+          color="gray"
+          square
+          variant="solid"
+          to="https://www.tiktok.com/@pixelslaves_"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 448 512"
@@ -56,7 +80,15 @@ definePageMeta({
             />
           </svg>
         </UButton>
-        <UButton size="lg" color="gray" square variant="solid">
+        <UButton
+          size="lg"
+          color="gray"
+          square
+          variant="solid"
+          to="https://discord.com/invite/ydrdkGAyEf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 640 512"
