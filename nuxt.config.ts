@@ -16,6 +16,7 @@ export default defineNuxtConfig({
     "nuxt-icon",
     "@nuxtjs/seo",
     "@vueuse/motion/nuxt",
+    "@nuxtjs/plausible",
   ],
   site: {
     url: "https://pixelslaves.com",
@@ -47,5 +48,8 @@ export default defineNuxtConfig({
     "/": { prerender: true },
     // prerender this route and all child routes
     "/players": { prerender: true },
+  },
+  plausible: {
+    domain: "pixelslaves.com",
   },
 });
