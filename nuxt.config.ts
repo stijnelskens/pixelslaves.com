@@ -6,9 +6,7 @@ export default defineNuxtConfig({
       "@nuxtjs/google-fonts",
       {
         families: {
-          "IBM Plex Mono": [500, 700],
           Inter: [500, 700, 800],
-          "PT Serif": [400, 700],
           download: true,
           inject: true,
         },
@@ -17,6 +15,7 @@ export default defineNuxtConfig({
     "@nuxt/ui",
     "nuxt-icon",
     "@nuxtjs/seo",
+    "@vueuse/motion/nuxt",
   ],
   site: {
     url: "https://pixelslaves.com",

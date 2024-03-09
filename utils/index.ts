@@ -5,3 +5,7 @@ export function formatDate(date: string) {
     year: "numeric",
   });
 }
+
+export function copy<T = unknown>(value: T): T {
+  return JSON.parse(JSON.stringify(value));
+}

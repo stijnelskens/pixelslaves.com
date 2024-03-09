@@ -1,7 +1,7 @@
 <script>
 export default {
   props: {
-    post: {
+    player: {
       type: Object,
       required: true,
     },
@@ -10,27 +10,27 @@ export default {
 </script>
 
 <template>
-  <UCard>
+  <UCard v-motion-slide-visible-once-bottom :delay="200">
     <template #header>
-      <h2 class="text-base font-bold sm:text-lg">{{ post.name }}</h2>
+      <h2 class="text-base font-bold sm:text-lg">{{ player.name }}</h2>
       <span class="text-sm">{{
-        post.categories.map((category) => category.title).join(", ")
+        player.categories.map((category) => category.title).join(", ")
       }}</span>
     </template>
     <template
       #footer
       v-if="
-        post.twitch ||
-        post.instagram ||
-        post.tiktok ||
-        post.youtube ||
-        post.twitter
+        player.twitch ||
+        player.instagram ||
+        player.tiktok ||
+        player.youtube ||
+        player.twitter
       "
     >
       <ul class="flex items-center gap-2.5">
-        <li v-if="post.twitch">
+        <li v-if="player.twitch">
           <a
-            :href="post.twitch"
+            :href="player.twitch"
             target="_blank"
             rel="noopener noreferrer"
             class="text-lg duration-300 ease-out transtion-color hover:text-primary"
@@ -38,9 +38,9 @@ export default {
             <Icon name="fa6-brands:twitch" />
           </a>
         </li>
-        <li v-if="post.instagram">
+        <li v-if="player.instagram">
           <a
-            :href="post.instagram"
+            :href="player.instagram"
             target="_blank"
             rel="noopener noreferrer"
             class="text-lg duration-300 ease-out transtion-color hover:text-primary"
@@ -48,18 +48,18 @@ export default {
             <Icon name="fa6-brands:instagram" />
           </a>
         </li>
-        <li v-if="post.tiktok">
+        <li v-if="player.tiktok">
           <a
-            :href="post.tiktok"
+            :href="player.tiktok"
             target="_blank"
             rel="noopener noreferrer"
             class="text-lg duration-300 ease-out transtion-color hover:text-primary"
             ><Icon name="fa6-brands:tiktok"
           /></a>
         </li>
-        <li v-if="post.youtube">
+        <li v-if="player.youtube">
           <a
-            :href="post.youtube"
+            :href="player.youtube"
             target="_blank"
             rel="noopener noreferrer"
             class="text-lg duration-300 ease-out transtion-color hover:text-primary"
@@ -67,9 +67,9 @@ export default {
             <Icon name="fa6-brands:youtube" />
           </a>
         </li>
-        <li v-if="post.twitter">
+        <li v-if="player.twitter">
           <a
-            :href="post.twitter"
+            :href="player.twitter"
             target="_blank"
             rel="noopener noreferrer"
             class="text-lg duration-300 ease-out transtion-color hover:text-primary"
