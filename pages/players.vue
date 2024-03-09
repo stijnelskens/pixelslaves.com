@@ -24,7 +24,8 @@ const sortedPlayers = computed(() => {
 });
 
 definePageMeta({
-  title: "Crew",
+  title: "Players",
+  description: "Meet the players of PixelSlaves",
 });
 </script>
 
