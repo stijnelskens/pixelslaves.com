@@ -12,7 +12,7 @@ export default {
 <template>
   <UCard>
     <template #header>
-      <h2 class="text-lg font-bold">{{ post.name }}</h2>
+      <h2 class="text-base font-bold sm:text-lg">{{ post.name }}</h2>
       <span class="text-sm">{{
         post.categories.map((category) => category.title).join(", ")
       }}</span>
