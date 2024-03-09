@@ -39,4 +39,5 @@ export default defineNuxtConfig({
     transpile: ["oh-vue-icons"],
   },
   devtools: { enabled: true },
+  ssr: true,
 });
