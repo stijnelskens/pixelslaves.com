@@ -39,8 +39,13 @@ export default defineNuxtConfig({
     transpile: ["oh-vue-icons"],
   },
   devtools: { enabled: true },
-  ssr: true,
   nitro: {
-    preset: "node-server",
+    static: true,
+  },
+  routeRules: {
+    // prerender index route by default
+    "/": { prerender: true },
+    // prerender this route and all child routes
+    "/players": { prerender: true },
   },
 });
