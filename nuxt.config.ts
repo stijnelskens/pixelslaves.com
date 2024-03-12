@@ -17,7 +17,6 @@ export default defineNuxtConfig({
     "@nuxtjs/seo",
     "@vueuse/motion/nuxt",
     "@nuxtjs/plausible",
-    "nuxt-proxy",
   ],
   site: {
     url: "https://pixelslaves.com",
@@ -52,16 +51,5 @@ export default defineNuxtConfig({
   },
   plausible: {
     domain: "pixelslaves.com",
-  },
-  proxy: {
-    options: {
-      target: "https://plausible.io",
-      changeOrigin: true,
-      pathRewrite: {
-        "^/js/script.js": "/js/script.js",
-        "^/api/event": "/api/event",
-      },
-      pathFilter: ["/js/script.js", "/api/event"],
-    },
   },
 });
