@@ -17,6 +17,7 @@ export default defineNuxtConfig({
     "@nuxtjs/seo",
     "@vueuse/motion/nuxt",
     "@nuxtjs/plausible",
+    "@nuxtjs/partytown",
   ],
   site: {
     url: "https://pixelslaves.com",
@@ -49,7 +50,21 @@ export default defineNuxtConfig({
     // prerender this route and all child routes
     "/players": { prerender: true },
   },
-  plausible: {
-    domain: "pixelslaves.com",
+  partytown: {
+    forward: ["$plausible", "$plausible.push"],
+  },
+  app: {
+    head: {
+      script: [
+        { innerHTML: "window.$plausible = [];" },
+        // Update this
+        {
+          src: "https://plausible.io/js/script.js",
+          defer: true,
+          type: "text/partytown",
+          "data-domain": "pixelslaves.com",
+        },
+      ],
+    },
   },
 });
