@@ -59,7 +59,7 @@ export default defineNuxtConfig({
         { innerHTML: "window.$plausible = [];" },
         // Update this
         {
-          src: "https://plausible.io/js/script.js",
+          src: "/hd372/js/script.js",
           defer: true,
           type: "text/partytown",
           "data-domain": "pixelslaves.com",
