@@ -20,9 +20,10 @@ export default defineNuxtConfig({
     "@nuxtjs/partytown",
   ],
   site: {
-    url: "https://pixelslaves.com",
+    url: "https://www.pixelslaves.com",
     name: "Pixelslaves",
-    description: "Welkom op de officiële website van de PixelSlaves!",
+    description:
+      "Een hechte groep vrienden verdeeld over Vlaanderen die elkaar online hebben leren kennen, samen gamen en plezier hebben onder de naam PixelSlaves.",
     defaultLocale: "nl-BE",
   },
   sanity: {
@@ -66,5 +67,8 @@ export default defineNuxtConfig({
         },
       ],
     },
+  },
+  ogImage: {
+    runtimeChromium: false,
   },
 });
