@@ -1,4 +1,12 @@
 <script setup lang="ts">
+import { Client } from "twitter-api-sdk";
+
+const client = new Client(process.env.TWITTER_BEARER_TOKEN as string);
+
+async function fetchTweet() {
+  const { data } = await client.users.findUserByUsername("spamstek");
+  console.log(data);
+}
 const columns = [
   {
     key: "id",
@@ -85,4 +93,9 @@ const people = [
 
 <template>
   <UTable :columns="columns" :rows="people" />
+  <UButton
+    label="Fetch data"
+    class="!bg-primarybrand-500 mt-4"
+    @click="fetchTweet"
+  />
 </template>
