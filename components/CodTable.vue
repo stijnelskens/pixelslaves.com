@@ -1,17 +1,9 @@
 <script setup lang="ts">
-import { Client } from "twitter-api-sdk";
-
-const client = new Client(process.env.TWITTER_BEARER_TOKEN as string);
-
-async function fetchTweet() {
-  const { data } = await client.users.findUserByUsername("spamstek");
-  console.log(data);
-}
 const columns = [
-  {
-    key: "id",
-    label: "#",
-  },
+  // {
+  //   key: "id",
+  //   label: "#",
+  // },
   {
     key: "player",
     label: "Player",
@@ -28,74 +20,55 @@ const columns = [
     sortable: true,
     direction: "desc" as const,
   },
-  {
-    key: "killrecord",
-    label: "Kill Record",
-    sortable: true,
-  },
+  // {
+  //   key: "killrecord",
+  //   label: "Kill Record",
+  //   sortable: true,
+  // },
   {
     key: "wins",
     label: "Wins",
     sortable: true,
   },
-  {
-    key: "score",
-    label: "Score / Min",
-    sortable: true,
-  },
+  // {
+  //   key: "score",
+  //   label: "Score / Min",
+  //   sortable: true,
+  // },
 ];
 
 const people = [
   {
     id: 1,
-    player: "Lindsay Walton",
-    kd: "Front-end Developer",
-    kills: "lindsay.walton@example.com",
-    role: "Member",
+    player: "Antonnio",
+    kd: 0.5,
+    kills: 450,
+    wins: 64,
   },
   {
     id: 2,
-    player: "Courtney Henry",
-    kd: "Designer",
-    kills: "courtney.henry@example.com",
-    role: "Admin",
+    player: "chevywood",
+    kd: 1.42,
+    kills: 3449,
+    wins: 121,
   },
   {
     id: 3,
-    player: "Tom Cook",
-    kd: "Director of Product",
-    kills: "tom.cook@example.com",
-    role: "Member",
+    player: "Dj Puppy",
+    kd: 1.48,
+    kills: 2000,
+    wins: 40,
   },
   {
     id: 4,
-    player: "Whitney Francis",
-    kd: "Copywriter",
-    kills: "whitney.francis@example.com",
-    role: "Admin",
-  },
-  {
-    id: 5,
-    player: "Leonard Krasner",
-    kd: "Senior Designer",
-    kills: "leonard.krasner@example.com",
-    role: "Owner",
-  },
-  {
-    id: 6,
-    player: "Floyd Miles",
-    kd: "Principal Designer",
-    kills: "floyd.miles@example.com",
-    role: "Member",
+    player: "Step Bro",
+    kd: 2.28,
+    kills: 4290,
+    wins: 152,
   },
 ];
 </script>
 
 <template>
   <UTable :columns="columns" :rows="people" />
-  <UButton
-    label="Fetch data"
-    class="!bg-primarybrand-500 mt-4"
-    @click="fetchTweet"
-  />
 </template>
